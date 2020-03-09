@@ -1,0 +1,5 @@
+This folder should contain two dataset:
+ - masstagSCE.rda
+ - mibiSCE.rda
+More informatio about these datasets can be find:
+https://github.com/BIRSBiointegration/Hackathon/tree/master/sc-targeted-proteomics
