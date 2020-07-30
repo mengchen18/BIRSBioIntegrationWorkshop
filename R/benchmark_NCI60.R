@@ -18,10 +18,10 @@ l <- mapply(function(x,y) {
   list(MBPCA = x, OLS = y)
 }, t1, t2, SIMPLIFY = FALSE)
 l <- unlist(l, recursive = FALSE)
-png("Fig/benchmark_NCI60_train40_test20.png", width = 12, height = 12, units = "cm", res = 300)
+# png("Fig/benchmark_NCI60_train40_test20.png", width = 12, height = 12, units = "cm", res = 300)
 par(mar = c(8, 4, 1, 1))
 boxplot(l, las = 2, ylab = "Correlation (predicted vs measured)")
-dev.off()
+# dev.off()
 
 ####
 ss <- sample(1:60, size = 20)
@@ -36,8 +36,8 @@ l <- mapply(function(x,y) {
 }, t1, t2, SIMPLIFY = FALSE)
 l <- unlist(l, recursive = FALSE)
 
-png("Fig/benchmark_NCI60_train20_test40.png", width = 12, height = 12, units = "cm", res = 300)
+# png("Fig/benchmark_NCI60_train20_test40.png", width = 12, height = 12, units = "cm", res = 300)
 par(mar = c(8, 4, 1, 1))
 boxplot(l, las = 2, ylab = "Correlation (predicted vs measured)")
-dev.off()
+# dev.off()
 

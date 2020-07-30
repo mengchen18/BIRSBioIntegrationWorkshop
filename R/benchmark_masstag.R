@@ -1,5 +1,6 @@
 library(mogsa)
 library(stringr)
+library(SummarizedExperiment)
 
 source("R/mbpca_method.R")
 source("R/lm_method.R")

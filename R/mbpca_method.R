@@ -21,7 +21,7 @@ pred_mbpca <- function(x, train.var, test.var, ncomp = 2, method = "globalScore"
   })
   names(lmats) <- names(x)
   
-  prd <- BiocParallel::bplapply(names(lmats), function(m) {
+  prd <- lapply(names(lmats), function(m) {
     # predicting matrix - m
     prdmat <- setdiff(names(lmats), m)
     rmat <- lapply(prdmat, function(mm) {
@@ -64,7 +64,6 @@ pred_mbpca <- function(x, train.var, test.var, ncomp = 2, method = "globalScore"
         })
       }
       r
-      
     })
     
     list(predicted = rmat, cor.train = pred.cor.train, cor.test = pred.cor.test)

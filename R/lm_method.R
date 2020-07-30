@@ -10,7 +10,8 @@ pred_lm <- function(x, train.var, test.var, validation = c("row", "column")[1], 
   
   xs <- lapply(x, function(x) as.data.frame(x[, train.var]))
   
-  prd <- BiocParallel::bplapply(names(xs), function(m) {
+  # prd <- BiocParallel::bplapply(names(xs), function(m) {
+  prd <- lapply(names(xs), function(m) {
     
     # predicting matrix - m
     prdmat <- setdiff(names(xs), m)
