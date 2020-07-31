@@ -1,14 +1,10 @@
 ---
 title: "Predicting the missing samples or features in partially overlapping data"
-output: 
-  html_document:
-    toc: true
-    keep_md: true
 author: Chen Meng
-date: "31 July, 2020"
+date: 21.07.2020
 ---
 
-
+# Predicting the missing samples or features in partially overlapping data
 
 ## Introduction
 Partially overlapping data are often faced in the multi-omics data. For example, a cohort has been profiling using multiple omics technologies, however, every technology may only profile a subset of the cohort. We call this scenario as data with partial overlapping samples. In the data analysis, We may want to predict the missing samples in one omics dataset using the information from other omics datasets, where the samples are measured. Similarly, we may also interested in the data with partial overlapping features, e.g. genes or proteins, where all the samples are measured in all datasets, but the measured features may vary. In this vignette, we first briefly describe two methods that can be used to solve these problems, i.e. simple least square regression and multi-block principal component analysis (MBPCA). Next, we applied the two methods to solve the "missing sample" problem (using NCI60 transcriptomics data as an example) and missing feature problem (using mass-tag single-cell proteomics data). Finally, we will discuss the pros and cons of the methods and factors that may influence the prediction performance.
